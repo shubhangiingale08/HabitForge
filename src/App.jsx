@@ -168,7 +168,7 @@ const handleAuth = async (e) => {
     console.log("Sending request:", endpoint, body);
 
     const response = await fetch(
-      `http://localhost:5000/api/auth/${endpoint}`,
+      `https://habitforge-backend-4s1j.onrender.com/api/auth/${endpoint}`,
       {
         method: "POST",
         headers: {
@@ -258,7 +258,7 @@ const [backendAchievements, setBackendAchievements] = useState([]);
      const token = localStorage.getItem("habitforge-token");
      
 const response = await fetch(
-  "http://localhost:5000/api/habits",
+  "https://habitforge-backend-4s1j.onrender.com/api/habits",
   {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -474,7 +474,7 @@ const response = await fetch(
   if (habit._id) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/habits/${habit._id}`,
+        `https://habitforge-backend-4s1j.onrender.com/api/habits/${habit._id}`,
         {
           method: "PUT",
          headers: {
@@ -603,7 +603,7 @@ const updatedHabit = data;
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/habits",
+        "https://habitforge-backend-4s1j.onrender.com/api/habits",
         {
           method: "POST",
           headers: {
@@ -669,7 +669,7 @@ const updatedHabit = data;
       const token = localStorage.getItem("habitforge-token");
 
 const response = await fetch(
-  `http://localhost:5000/api/habits/${habit._id}`,
+  `https://habitforge-backend-4s1j.onrender.com/api/habits/${habit._id}`,
   {
     method: "DELETE",
     headers: {
@@ -742,7 +742,7 @@ const response = await fetch(
     try {
       const token = localStorage.getItem("habitforge-token");
       const response = await fetch(
-        `http://localhost:5000/api/habits/${habit._id}`,
+        `https://habitforge-backend-4s1j.onrender.com/api/habits/${habit._id}`,
         {
           method: "PUT",
           headers: {
@@ -836,7 +836,7 @@ const response = await fetch(
     for (const habit of habits) {
       if (habit._id && habit.completed) {
         const response = await fetch(
-          `http://localhost:5000/api/habits/${habit._id}`,
+          `https://habitforge-backend-4s1j.onrender.com/api/habits/${habit._id}`,
           {
             method: "PUT",
             headers: {
