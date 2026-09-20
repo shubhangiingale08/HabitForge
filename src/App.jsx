@@ -748,8 +748,9 @@ const response = await fetch(
         {
           method: "PUT",
           headers: {
-            "Content-Type": "application/json",
-          },
+  "Content-Type": "application/json",
+  Authorization: `Bearer ${token}`,
+},
           body: JSON.stringify({
             name: editHabitName.trim(),
             userId: user.id,
