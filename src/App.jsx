@@ -372,6 +372,7 @@ const response = await fetch(
   );
 
   if (!habit) return;
+  const token = localStorage.getItem("habitforge-token");
 
   // Local date (YYYY-MM-DD)
   const today = new Date();
